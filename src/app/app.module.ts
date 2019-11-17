@@ -7,12 +7,14 @@ import {StocksApiService} from "./service/stocks-api.service";
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import {
   MatButtonModule,
-  MatCardModule,
-  MatFormFieldModule,
+  MatCardModule, MatDividerModule,
+  MatFormFieldModule, MatGridListModule,
   MatInputModule,
   MatSelectModule,
   MatSliderModule
 } from "@angular/material";
+import {BrowserAnimationsModule, NoopAnimationsModule} from "@angular/platform-browser/animations";
+import {HttpClientModule} from "@angular/common/http";
 
 @NgModule({
   declarations: [
@@ -21,6 +23,9 @@ import {
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
+    NoopAnimationsModule,
+    HttpClientModule,
     FormsModule,
     ReactiveFormsModule,
     MatInputModule,
@@ -28,7 +33,9 @@ import {
     MatSliderModule,
     MatCardModule,
     MatFormFieldModule,
-    MatButtonModule
+    MatButtonModule,
+    MatDividerModule,
+    MatGridListModule
   ],
   providers: [
     StocksApiService

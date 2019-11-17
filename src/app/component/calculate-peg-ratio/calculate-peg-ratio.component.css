@@ -1,0 +1,40 @@
+
+.peg-ratio-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+}
+
+.peg-ratio-fields {
+  display: flex;
+  flex-direction: column;
+/*justify-content: space-between;*/
+}
+
+mat-form-field {
+  margin: 8px;
+}
+
+@media screen and (min-width: 710px){
+
+  .peg-ratio-content {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .peg-ratio-fields {
+    display: flex;
+    flex-direction: row;
+  }
+}
+
+
+@media only screen and (min-width: 480px) and (max-width: 850px){
+
+
+  .peg-ratio-content {
+    display: flex;
+    flex-direction: column;
+  }
+}

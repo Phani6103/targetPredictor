@@ -1,3 +1,35 @@
 <form action="submit">
+  <mat-card>
+    <mat-card-title>
+      Formula
+    </mat-card-title>
+    <mat-card-content class="peg-ratio-content">
+<!--      <mat-grid-list cols="1">-->
+      <div class="peg-ratio-fields">
+        <mat-form-field>
+          <input matInput type="number" (click)="$event" placeholder="Share Price" value="" id="sharePrice">
+        </mat-form-field>
+        <mat-form-field>
+          <input matInput type="number" placeholder="EPS" id="eps">
+        </mat-form-field>
+        <mat-form-field>
+          <input matInput type="number" placeholder="EPS Growth Rate" id="epsGrowth">
+        </mat-form-field>
+        <div style="display: flex; align-self: center">
+          <button mat-button type="submit" (click)="calculatePEGRatio()">
+            Calculate
+          </button>
+        </div>
+      </div>
+      <div>
+        <label for="pegRatio">
+          <span>PEG Ratio: </span>
+          <a id="pegRatio">{{pegRatio}}</a>
+        </label>
+      </div>
+<!--      </mat-grid-list>-->
+      </mat-card-content>
 
+
+  </mat-card>
 </form>
