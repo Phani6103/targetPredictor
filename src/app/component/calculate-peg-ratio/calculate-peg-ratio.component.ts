@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import {StocksApiService} from "../../service/stocks-api.service";
-import {map} from "rxjs/operators";
+import {StocksApiService} from '../../service/stocks-api.service';
+import {map} from 'rxjs/operators';
 
 @Component({
   selector: 'app-calculate-peg-ratio',
@@ -8,7 +8,10 @@ import {map} from "rxjs/operators";
   styleUrls: ['./calculate-peg-ratio.component.css']
 })
 export class CalculatePegRatioComponent implements OnInit {
-  pegRatio: number = NaN;
+  pegRatio: number;
+  shareValue: number;
+  epsValue: number;
+  epsGrowthValue: number;
 
   constructor(private stocksApiService: StocksApiService) { }
 
@@ -16,16 +19,12 @@ export class CalculatePegRatioComponent implements OnInit {
     this.stocksApiService.stockPrice
       .pipe(map(resp => JSON.parse(resp.toString())))
       .subscribe(resp => {
-        console.log(resp)
+        console.log(resp);
       });
   }
 
   calculatePEGRatio() {
-    let shareValue = document.getElementById('sharePrice').innerHTML;
-    let epsValue = document.getElementById('eps').innerHTML;
-    let epsGrowthValue = document.getElementById('epsGrowth').innerText;
-
-    const pegRatioFormula = (shareValue * epsValue)/ epsGrowthValue;
+    const pegRatioFormula = (this.shareValue * this.epsValue) / this.epsGrowthValue;
     this.pegRatio = pegRatioFormula;
     return pegRatioFormula;
 

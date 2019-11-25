@@ -1,4 +1,4 @@
-<form action="submit">
+<form action="submit" pegRatioForm="NgForm">
   <mat-card>
     <mat-card-title>
       Formula
@@ -7,13 +7,13 @@
 <!--      <mat-grid-list cols="1">-->
       <div class="peg-ratio-fields">
         <mat-form-field>
-          <input matInput type="number" (click)="$event" placeholder="Share Price" value="" id="sharePrice">
+          <input matInput type="number" [ngModel]="shareValue" placeholder="Share Price" id="sharePrice">
         </mat-form-field>
         <mat-form-field>
-          <input matInput type="number" placeholder="EPS" id="eps">
+          <input matInput type="number" [ngModel]="epsValue" placeholder="EPS" id="eps">
         </mat-form-field>
         <mat-form-field>
-          <input matInput type="number" placeholder="EPS Growth Rate" id="epsGrowth">
+          <input matInput type="number" [ngModel]="epsGrowthValue" placeholder="EPS Growth Rate" id="epsGrowth">
         </mat-form-field>
         <div style="display: flex; align-self: center">
           <button mat-button type="submit" (click)="calculatePEGRatio()">
