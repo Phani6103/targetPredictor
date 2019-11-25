@@ -1,0 +1,25 @@
+<!--<mat-sidenav-container>-->
+<!--  <mat-sidenav mode="over" (opened)="true" position="end">-->
+<!--    side nav-->
+<!--  </mat-sidenav>-->
+<!--  <mat-sidenav-content>-->
+<!--    <mat-icon>menu</mat-icon>-->
+<!--    side nav content-->
+<!--  </mat-sidenav-content>-->
+<!--</mat-sidenav-container>-->
+
+<mat-drawer-container>
+  <mat-drawer #drawer mode="side" opened>
+    <ul>
+      <li><a routerLink="/home">Home</a></li>
+    </ul>
+    <ul>
+      <li><a routerLink="/bullish">Bullish</a></li>
+    </ul>
+  </mat-drawer>
+  <mat-drawer-content>
+    <mat-icon (click)="drawer.toggle()">menu</mat-icon>
+    <router-outlet></router-outlet>
+  </mat-drawer-content>
+</mat-drawer-container>
+
