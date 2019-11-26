@@ -1,4 +1,8 @@
 <form [formGroup]="bullishStocksForm">
+
+  <button (click)="addRow()">
+    Add Row
+  </button>
   <table>
     <tr>
       <th>
@@ -46,8 +50,5 @@
     </tr>
   </table>
 
-  <button (click)="addRow()">
-    Add Row
-  </button>
 
 </form>
