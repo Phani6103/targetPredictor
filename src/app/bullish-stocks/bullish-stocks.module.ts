@@ -3,7 +3,7 @@ import {BullishStocksComponent} from './bullish-stocks.component';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {BullishStocksRoutingModule} from './bullish-stocks-routing.module';
 import {CommonModule} from '@angular/common';
-import {MatTabsModule} from '@angular/material';
+import {MatButtonModule, MatIconModule, MatTabsModule} from '@angular/material';
 
 @NgModule({
   declarations: [
@@ -14,7 +14,9 @@ import {MatTabsModule} from '@angular/material';
     FormsModule,
     CommonModule,
     MatTabsModule,
-    BullishStocksRoutingModule
+    MatButtonModule,
+    MatIconModule,
+    BullishStocksRoutingModule,
   ]
 })
 export class BullishStocksModule {}
