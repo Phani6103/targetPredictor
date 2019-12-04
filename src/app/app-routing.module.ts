@@ -1,11 +1,12 @@
 import {NgModule} from '@angular/core';
-import {Route, RouterModule, Routes} from '@angular/router';
-import {BullishStocksComponent} from './component/bullish-stocks/bullish-stocks.component';
-import {HomeComponent} from './component/home/home.component';
+import { RouterModule, Routes} from '@angular/router';
+import {PageNotFoundComponent} from './component/page-not-found/page-not-found.component';
 
 const appRoutes: Routes = [
-  { path: 'home', component: HomeComponent},
-  { path: 'bullish', component: BullishStocksComponent}];
+  { path: '', redirectTo: '/home', pathMatch: 'full'},
+  { path: '**', component: PageNotFoundComponent}
+  ];
+
 @NgModule({
   imports: [
     RouterModule.forRoot(appRoutes, {

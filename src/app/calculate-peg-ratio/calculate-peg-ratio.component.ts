@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {StocksApiService} from '../../service/stocks-api.service';
+import {StocksApiService} from '../service/stocks-api.service';
 import {map} from 'rxjs/operators';
 
 @Component({

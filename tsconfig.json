@@ -19,5 +19,12 @@
       "es2018",
       "dom"
     ]
+  },
+  "angularCompilerOptions": {
+    "fullTemplateTypeCheck": true,
+    "preserveWhiteSpaces": true,
+    "plugins" : [
+      { "name":  "@angular/language-service"}
+    ]
   }
 }

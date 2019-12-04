@@ -1,4 +1,8 @@
 <form [formGroup]="bullishStocksForm">
+
+  <button (click)="addRow()">
+    Add Row
+  </button>
   <table>
     <tr>
       <th>
@@ -18,27 +22,27 @@
       </th>
     </tr>
     <tr formArrayName="stocks" *ngFor="let stock of stocks.controls; let i=index">
-        <td  [formGroupName]="i">
+        <td  formGroupName="i">
           <label for="name">
             <input id="name" type="text" formControlName="name">
           </label>
         </td>
-        <td  [formGroupName]="i">
+        <td  formGroupName="i">
           <label for="support1">
             <input id="support1" type="text" formControlName="support1">
           </label>
         </td>
-        <td [formGroupName]="i">
+        <td formGroupName="i">
           <label for="support2">
             <input id="support2" type="text" formControlName="support2">
           </label>
         </td>
-        <td [formGroupName]="i">
+        <td formGroupName="i">
           <label for="resistance1">
             <input id="resistance1" type="text" formControlName="resistance1">
           </label>
         </td>
-        <td [formGroupName]="i">
+        <td formGroupName="i">
           <label for="resistance2">
             <input id="resistance2" type="text" formControlName="resistance2">
           </label>
@@ -46,8 +50,5 @@
     </tr>
   </table>
 
-  <button (click)="addRow()">
-    Add Row
-  </button>
 
 </form>
