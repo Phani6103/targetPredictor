@@ -1,0 +1,12 @@
+<nav mat-tab-nav-bar >
+  <a mat-tab-link routerLink="/home" routerLinkActive #home="routerLinkActive"
+     [active]="home.isActive">
+    Home
+  </a>
+  <a mat-tab-link routerLink="/bullish" routerLinkActive #bS="routerLinkActive"
+     [active]="bS.isActive">
+    Bullish
+  </a>
+</nav>
+<router-outlet></router-outlet>
+
