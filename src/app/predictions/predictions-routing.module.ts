@@ -1,5 +1,5 @@
 import {RouterModule, Routes} from '@angular/router';
-import {BullishStocksComponent} from './bullish-stocks/bullish-stocks.component';
+import {BullishStocksComponent} from './component/bullish-stocks/bullish-stocks.component';
 import {NgModule} from '@angular/core';
 
 const predictionsRoutes: Routes = [
