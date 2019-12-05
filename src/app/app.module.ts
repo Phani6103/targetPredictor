@@ -21,10 +21,10 @@ import {HttpClientModule} from '@angular/common/http';
 import { NavBarComponent } from './component/nav-bar/nav-bar.component';
 import {AppRoutingModule} from './app-routing.module';
 import {PageNotFoundComponent} from './component/page-not-found/page-not-found.component';
-import {BullishStocksModule} from './bullish-stocks/bullish-stocks.module';
 import {HomeModule} from './home/home.module';
 import {FooterComponent} from './footer/footer.component';
 import {CalculatePegRatioComponent} from './calculate-peg-ratio/calculate-peg-ratio.component';
+import {PredictionsModule} from './predictions/predictions.module';
 
 
 @NgModule({
@@ -54,7 +54,7 @@ import {CalculatePegRatioComponent} from './calculate-peg-ratio/calculate-peg-ra
     MatIconModule,
     MatTabsModule,
     HomeModule,
-    BullishStocksModule,
+    PredictionsModule,
     AppRoutingModule
   ],
   providers: [
