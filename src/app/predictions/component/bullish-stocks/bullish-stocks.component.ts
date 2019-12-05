@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {FormArray, FormBuilder, FormGroup} from '@angular/forms';
+import {PredictionsService} from '../../service/predictions.service';
 
 @Component({
   selector: 'app-bullish-stocks',
@@ -13,10 +14,11 @@ export class BullishStocksComponent implements OnInit {
       ])
   });
 
-  constructor(private fb: FormBuilder) { }
+  constructor(private fb: FormBuilder, private predictionsService: PredictionsService) { }
 
   ngOnInit() {
-
+    this.predictionsService
+      .getPredictionsData();
   }
 
   get stock() {

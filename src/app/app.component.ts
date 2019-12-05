@@ -9,7 +9,6 @@ import {environment} from '../environments/environment';
 export class AppComponent {
   title?: string;
   constructor() {
-    console.log(environment.production);
     this.title = 'Target Predictor';
   }
 }
