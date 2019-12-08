@@ -7,6 +7,9 @@
           Name
         </th>
         <th>
+          Current Value
+        </th>
+        <th>
           Support 1
         </th>
         <th>
@@ -26,6 +29,11 @@
         <td  [formGroupName]="i">
           <label for="name">
             <input id="name" type="text" formControlName="name">
+          </label>
+        </td>
+        <td  [formGroupName]="i">
+          <label for="currentValue">
+            <input id="currentValue" type="text" formControlName="currentValue">
           </label>
         </td>
         <td  [formGroupName]="i">
