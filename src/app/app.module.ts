@@ -11,7 +11,7 @@ import {
   MatFormFieldModule,
   MatGridListModule,
   MatIconModule,
-  MatInputModule,
+  MatInputModule, MatListModule,
   MatSelectModule,
   MatSidenavModule,
   MatSliderModule, MatTabsModule
@@ -24,7 +24,10 @@ import {PageNotFoundComponent} from './component/page-not-found/page-not-found.c
 import {HomeModule} from './home/home.module';
 import {FooterComponent} from './footer/footer.component';
 import {CalculatePegRatioComponent} from './calculate-peg-ratio/calculate-peg-ratio.component';
-import {PredictionsModule} from './predictions/predictions.module';
+import {AngularModule} from './angular.module';
+import { ContactComponent } from './contact/contact.component';
+import {StocksRoutingModule} from './stocks/stocks-routing.module';
+import {StocksModule} from './stocks/stocks.module';
 
 
 @NgModule({
@@ -33,7 +36,7 @@ import {PredictionsModule} from './predictions/predictions.module';
     NavBarComponent,
     PageNotFoundComponent,
     FooterComponent,
-    CalculatePegRatioComponent
+    CalculatePegRatioComponent,
   ],
   imports: [
     BrowserModule,
@@ -53,15 +56,20 @@ import {PredictionsModule} from './predictions/predictions.module';
     MatSidenavModule,
     MatIconModule,
     MatTabsModule,
+    AngularModule,
     HomeModule,
-    PredictionsModule,
-    AppRoutingModule
+    MatListModule,
+    StocksModule,
+    AppRoutingModule,
   ],
   providers: [
     StocksApiService
   ],
   bootstrap: [
     AppComponent
+  ],
+  exports: [
+    AngularModule
   ]
 })
 export class AppModule { }

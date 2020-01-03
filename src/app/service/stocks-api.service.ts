@@ -11,17 +11,17 @@ export class StocksApiService {
 
   get stockPrice() {
     const url = 'https://api-v2.intrinio.com/fundamentals/AAPL-income_statement-2018-Q1/reported_financials';
-    let options = {
+    const options = {
       headers: {
-        "api_key": 'OmEzNjA1NTg3OTFlZjJiMmJjOWI0YWU4YjBlMzM2MGNi'
+        api_key: 'OmEzNjA1NTg3OTFlZjJiMmJjOWI0YWU4YjBlMzM2MGNi'
       }
     };
     return this.http.get(url, options)
       .pipe(map(resp => {
         // document.write(resp.fundamental);
-        return resp
+        return resp;
           }
         )
-      )
+      );
   }
 }

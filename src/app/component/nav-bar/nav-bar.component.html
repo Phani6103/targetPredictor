@@ -3,10 +3,19 @@
      [active]="home.isActive">
     Home
   </a>
-  <a mat-tab-link routerLink="/bullish" routerLinkActive #bS="routerLinkActive"
-     [active]="bS.isActive">
-    Bullish
+  <a mat-tab-link routerLink="/stocks" routerLinkActive #market="routerLinkActive" [active]="market.isActive">
+    <div style="flex-direction: column; overflow: visible; z-index: 1000">
+      <span>Stocks</span>
+<!--      <div *ngIf="market.isActive" style="display: flex; flex-direction: column; position: absolute;">-->
+<!--        <span>Test</span>-->
+<!--        <span>Test1</span>-->
+<!--      </div>-->
+    </div>
   </a>
+  <a mat-tab-link routerLink="/Test" routerLinkActive #test="routerLinkActive" [active]="test.isActive">
+    Test
+  </a>
+
 </nav>
 <router-outlet></router-outlet>
 
