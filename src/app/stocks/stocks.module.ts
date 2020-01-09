@@ -4,6 +4,7 @@ import {StocksRoutingModule} from './stocks-routing.module';
 import {StocksComponent} from './stocks.component';
 import {StockFormComponent} from './stock-form/stock-form.component';
 import {StocksListComponent} from './stocks-list/stocks-list.component';
+import {PredictionFormComponent} from './stock-form/prediction-form/prediction-form.component';
 
 
 
@@ -11,7 +12,8 @@ import {StocksListComponent} from './stocks-list/stocks-list.component';
   declarations: [
     StocksComponent,
     StockFormComponent,
-    StocksListComponent
+    StocksListComponent,
+    PredictionFormComponent
   ],
   imports: [
     CommonModule,
