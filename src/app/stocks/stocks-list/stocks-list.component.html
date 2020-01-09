@@ -2,7 +2,7 @@
   <label for="stocksDataListInput">
     Stock
   </label>
-  <input (input)="onStockSelected()" type="text" id="stocksDataListInput" list="stocksDataList" placeholder="Select/Type">
+  <input type="text" id="stocksDataListInput" list="stocksDataList" placeholder="Select/Type">
   <datalist id="stocksDataList">
     <option id="stocksDataListOption" [value]="stock.name" *ngFor="let stock of stocks">{{stock.name}}</option>
   </datalist>
