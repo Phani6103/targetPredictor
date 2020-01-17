@@ -1,12 +1,15 @@
 import {NgModule} from '@angular/core';
-import {RouterModule, Routes} from '@angular/router';
+import {CanActivate, CanActivateChild, RouterModule, Routes} from '@angular/router';
 import {StocksComponent} from './stocks.component';
 import {StockFormComponent} from './stock-form/stock-form.component';
 import {StocksListComponent} from './stocks-list/stocks-list.component';
+import {CanDeactivateRouteGuard} from './gurads/can-deativate-route.guard';
+import {CanActivateRouteGuard} from './gurads/can-activate-route.guard';
 
 const stockRoutes: Routes = [
   { path: 'stocks',
     component: StocksComponent,
+    canActivate: [CanActivateRouteGuard],
     children: [
       {
         path: '',
@@ -14,7 +17,9 @@ const stockRoutes: Routes = [
       },
       {
       path: ':id',
-      component: StockFormComponent
+      component: StockFormComponent,
+      canActivate: [CanActivateRouteGuard],
+      canDeactivate: [CanDeactivateRouteGuard]
       }
     ]
   }
